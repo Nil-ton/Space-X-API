@@ -5,7 +5,6 @@ import {
     BadRequestException,
     Param,
     Query,
-    ValidationPipe,
 } from '@nestjs/common';
 import { LaunchesService } from './launches.service';
 import { CreateLaunchDto } from './dto/create-launch.dto';
