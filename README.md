@@ -411,24 +411,7 @@ You can search for any result key example:
 	"datasets": [
 		{
 			"label": "Falcon 9",
-			"data": [
-				0,
-				0,
-				0,
-				0,
-				2,
-				2,
-				3,
-				6,
-				7,
-				9,
-				18,
-				20,
-				11,
-				26,
-				31,
-				43
-			],
+			"data": [0, 0, 0, 0, 2, 2, 3, 6, 7, 9, 18, 20, 11, 26, 31, 43],
 			"backgroundColor": [
 				"rgb(115,168,41)",
 				"rgb(115,168,41)",
@@ -450,24 +433,7 @@ You can search for any result key example:
 		},
 		{
 			"label": "Falcon Heavy",
-			"data": [
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				1,
-				2,
-				0,
-				0,
-				0
-			],
+			"data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0],
 			"backgroundColor": [
 				"rgb(153,23,122)",
 				"rgb(153,23,122)",
@@ -489,24 +455,7 @@ You can search for any result key example:
 		},
 		{
 			"label": "Falcon 1",
-			"data": [
-				1,
-				1,
-				2,
-				1,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0
-			],
+			"data": [1, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 			"backgroundColor": [
 				"rgb(147,58,236)",
 				"rgb(147,58,236)",
@@ -532,4 +481,4 @@ You can search for any result key example:
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+[MIT licensed](./LICENSE).
