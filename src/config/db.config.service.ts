@@ -11,6 +11,7 @@ export class DBConfigService implements TypeOrmOptionsFactory {
             type: 'mongodb',
             url: this.configService.get<string>('DB_URL'),
             entities: [__dirname + '/../**/*entity{.js,.ts}'],
+            ssl: false,
         };
     }
 }
