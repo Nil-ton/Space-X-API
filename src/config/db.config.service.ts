@@ -7,6 +7,7 @@ import { Injectable } from '@nestjs/common';
 export class DBConfigService implements TypeOrmOptionsFactory {
     constructor(private configService: ConfigService) {}
     createTypeOrmOptions(): TypeOrmModuleOptions {
+        console.log(this.configService.get<string>('DB_URL'));
         return {
             type: 'mongodb',
             url: this.configService.get<string>('DB_URL'),
