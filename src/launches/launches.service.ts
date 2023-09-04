@@ -166,7 +166,7 @@ export class LaunchesService {
             }, [])
             .map((item) => ({
                 name: item.rocket.name,
-                type: 'name',
+                type: 'rocket',
             }));
 
         const a = [
