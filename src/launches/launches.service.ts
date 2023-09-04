@@ -157,7 +157,7 @@ export class LaunchesService {
         }));
 
         const sendRocket = rocket.map((item) => ({
-            name: item.name,
+            name: item.rocket.name,
             type: 'name',
         }));
 
