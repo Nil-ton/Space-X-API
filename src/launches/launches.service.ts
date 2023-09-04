@@ -172,8 +172,8 @@ export class LaunchesService {
         const a = [
             ...sendLaunch,
             ...sendRocket,
-            { name: true, type: 'success' },
-            { name: false, type: 'success' },
+            { name: 'sucesso', type: 'success' },
+            { name: 'falha', type: 'success' },
         ];
 
         return a;
