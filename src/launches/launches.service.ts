@@ -156,17 +156,27 @@ export class LaunchesService {
             type: 'name',
         }));
 
-        const sendRocket = rocket.map((item) => ({
-            name: item.rocket.name,
-            type: 'rocket',
-        }));
+        const sendRocket = rocket
+            .reduce((total, item) => {
+                const name = item.rocket.name;
+                if (!total.some((current) => current.rocket.name === name)) {
+                    return [...total, item];
+                }
+                return total;
+            }, [])
+            .map((item) => ({
+                name: item.rocket.name,
+                type: 'name',
+            }));
 
-        return [
+        const a = [
             ...sendLaunch,
             ...sendRocket,
             { name: true, type: 'success' },
             { name: false, type: 'success' },
         ];
+
+        return a;
     }
 
     async findSearch(searchOptions?: any): Promise<PaginatedResponseDto> {
