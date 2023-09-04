@@ -143,6 +143,26 @@ export class LaunchesService {
         });
         return launches;
     }
+    async findSearchOptions() {
+        const launches = await this.launchRepository.find({
+            select: ['name'],
+        });
+        const rocket = await this.launchRepository.find({
+            select: ['rocket'],
+        });
+
+        const sendLaunch = launches.map((item) => ({
+            name: item.name,
+            type: 'name',
+        }));
+
+        const sendRocket = rocket.map((item) => ({
+            name: item.name,
+            type: 'name',
+        }));
+
+        return [...sendLaunch, ...sendRocket];
+    }
 
     async findSearch(searchOptions?: any): Promise<PaginatedResponseDto> {
         const { limit = 10, page = 1 } = searchOptions;

@@ -76,9 +76,14 @@ export class LaunchesController {
         }
     }
 
-    @Get(':id')
-    findOne(@Param('id') id: string) {
-        return this.launchesService.findOne(id);
+    @Get('/search')
+    async search() {
+        return this.launchesService.findSearchOptions();
+    }
+
+    @Get('/:id')
+    async findOne(@Param('id') id: string) {
+        return await this.launchesService.findOne(id);
     }
 
     @Post('/start-repository')
