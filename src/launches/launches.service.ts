@@ -161,14 +161,16 @@ export class LaunchesService {
                 }
                 if (searchOptions.success) {
                     where.success = Boolean(searchOptions.success);
-                }
-
-                if (searchOptions.name) {
+                } else if (searchOptions.name) {
                     where.name = new RegExp(`^${searchOptions.name}`, 'i');
-                }
-
-                if (searchOptions._id) {
+                } else if (searchOptions._id) {
                     where._id = new RegExp(`^${searchOptions._id}`, 'i');
+                } else if (searchOptions.rocket) {
+                    where['rocket.name'] = new RegExp(
+                        `^${searchOptions.rocket}`,
+                        'i',
+                    );
+                    delete where.rocket;
                 }
             });
         }
