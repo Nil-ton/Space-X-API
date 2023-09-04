@@ -160,7 +160,8 @@ export class LaunchesService {
                     where.flight_number = Number(searchOptions.flight_number);
                 }
                 if (searchOptions.success) {
-                    where.success = Boolean(searchOptions.success);
+                    where.success =
+                        searchOptions.success === 'true' ? true : false;
                 } else if (searchOptions.name) {
                     where.name = new RegExp(`^${searchOptions.name}`, 'i');
                 } else if (searchOptions._id) {
